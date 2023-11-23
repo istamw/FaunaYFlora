@@ -1,2 +1,2 @@
 # FaunaYFlora
-Trabajo de Gabinete 2do ICA eso
+Trabajo de Gabinete 2do ICA y eso
