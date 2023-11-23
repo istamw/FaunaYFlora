@@ -1,0 +1,588 @@
+:root{
+    --negro:#040404;
+    --amarillo:#ffdc12;
+    --white:#971a14;
+    --retro-white:rgb(255, 241, 241);
+    --negrito:#1a1a1a;
+    --azul:#051d65;
+    --morado:#331a37;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding: 1rem;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header{
+    position: absolute;
+    background-color: transparent;
+    border-bottom: 7px solid transparent;
+    top: 0; left: 0; right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000
+}
+
+header .logo{
+    font-family: 'font1',sans-serif;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    color: var(--retro-white);
+    font-weight: bolder;
+}
+
+header #leaf{
+    font-size: 3.5rem;
+    color: var(--retro-white);
+    cursor: pointer;
+}
+
+header #leaf:hover{
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+header .logo span{
+    font-family: 'font1',sans-serif;
+    color: var(--retro-white);
+}
+
+header .navbar{
+    margin-right: 90px;
+}
+
+header .navbar a{
+    font-family: 'font3',sans-serif;
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    color: var(--retro-white);
+}
+
+header .navbar a:hover{
+    font-size: 2.8rem;
+    text-shadow: 0 0 50px rgba(255, 255, 255, 1);
+}
+
+header #toggler{
+    display: none;
+    background-color: var(--negrito);
+
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: 5px solid rgba(0,0,0,.3);
+    display: none;
+}
+
+.musica {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#reproducir {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 3rem;
+    color: var(--retro-white);
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+#reproducir:hover {
+    font-size: 4rem;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.home{
+    display: flex; 
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    min-height: 1080px;
+    max-height: 100vh;
+    margin: 0;
+    background:linear-gradient(to right, rgba(0, 0, 0,0.5), rgba(255,0,0,0)), url("images/paisaje.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    margin: auto;
+}
+
+.home .content h3{
+    font-family: 'font1', sans-serif;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 14rem;
+    color: var(--retro-white);
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    line-height: 0.8;
+}
+
+.home .content span{
+    font-family: 'font3',sans-serif;
+    margin-left: 6rem;
+    font-size: 4rem;
+    color: var(--retro-white);
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-family: 'font3',sans-serif;
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: var(--retro-white);
+    line-height: 1.5;
+    text-shadow: 0px 0px 10px black;
+}
+
+.btn{
+    display: inline-block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    border: 2px solid var(--retro-white);
+    color: var(--retro-white);
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: var(--pink);
+    color: var(--negro);
+    background-color: var(--retro-white);
+}
+
+.heading{
+    font-family: 'font3',sans-serif;
+    letter-spacing: 3px ;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--retro-white);
+    padding: 1rem;
+    border-radius: .4rem;
+    background: transparent;
+}
+
+.heading span{
+    font-family: 'font2',sans-serif;
+    letter-spacing: 3px ;
+    color: var(--retro-white);
+}
+
+.about{
+    background: black;
+    min-height: 600px;
+    margin: 0;
+}
+
+.about .row{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 8rem 2rem;
+    padding-bottom: 3rem;
+    border-radius: 0rem;
+    background-color: rgba(0, 0, 0,0.2);
+    color: white;
+}
+
+.about .row .content h3{
+    font-family: 'font1',sans-serif;
+    letter-spacing: 10px;
+    padding-bottom: 15px;
+    font-size: 5rem;
+    margin-left: 100px;
+}
+
+.about .row .content p{
+    font-family: 'font3',sans-serif;
+    font-size: 2rem;
+    width: 550px;
+    height: 200px;
+    line-height: 1.8;
+}
+
+.about .row .video-container{
+    flex: 1 1 50rem;
+    position: relative;
+}
+
+.about .row .video-container video{
+    width: 100%;
+    border-radius: 1rem;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+}
+
+.about .row .video-container h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background: transparent;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.info{
+    display: flex; 
+    flex-direction: column;
+    min-height: 1850px;
+    max-height: 1850px;
+    margin: 0;
+    background:linear-gradient(to right, rgba(0, 0, 0,0.5), rgba(255,0,0,0)),linear-gradient(to left, rgba(0, 0, 0,0.5), rgba(255,0,0,0)), url("images/paisaje2.jpg");
+    background-size:cover;
+    background-position: top;
+}
+
+.info .content{
+    margin-top: 80px;
+}
+
+.info .content h1{
+    color: var(--retro-white);
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 5rem;
+    font-family: 'font2', serif;
+    letter-spacing: 5px;
+}
+
+.info .content p{
+    text-align: justify;
+    color: rgb(169, 169, 169);
+    font-size: 1.7rem;
+    line-height: 2;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0,0.4), rgba(0, 0, 0,0.3));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.gallery{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    margin: 0;
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery .sec{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.gallery .sec h1{
+    text-align: center;
+    color: var(--retro-white);
+    font-size: 6rem;
+    letter-spacing: 10px;
+    font-family: 'font1',sans-serif;
+}
+
+.gallery .sec i{
+    font-size: 3rem;
+}
+
+.gallery .fotos{
+    display: flex;
+    height: 45rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.gallery .fotos div{
+    flex: 1;
+    border-radius: .5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .4s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.gallery .fotos div:hover{
+    flex: 4;
+}
+
+.gallery .fotos .papa{
+    display: flex;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.gallery .fotos .papa p{
+    color: transparent;
+    font-family: 'font3',sans-serif;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    margin: 10px;
+}
+
+.gallery .fotos .papa:hover > p{
+    color: rgb(212, 212, 212);
+    background-color: black;
+    background: linear-gradient(135deg, rgba(0, 0, 0,0.4), rgba(0, 0, 0,0.4));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    background: black;
+    background-size:cover;
+    background-position: top;
+}
+
+.contact .form{
+    background-color: rgb(21, 21, 21);
+    width: 80%;
+    height: 700px;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .content{
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.icos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icos i{
+    font-size: 6rem;
+    color: var(--retro-white);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.icos i:hover{
+    color: purple;
+}
+
+.contact .content h1{
+    color: var(--retro-white);
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'font3',sans-serif;
+    letter-spacing: 4px;
+}
+
+.contact label{
+    display: flex;
+    color: var(--retro-white);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input{
+    width: 400px;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: #1a1a1a;
+    box-shadow: 0 5px 0 rgb(53, 53, 53);
+    color: var(--retro-white);
+}
+
+.contact textarea{
+    resize: none;
+    width: 400px;
+    height: 250px;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: #1a1a1a;
+    box-shadow: 0 5px 0 rgb(53, 53, 53);
+    color: var(--retro-white);
+}
+
+.contact button{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 1.2rem;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    border-radius: .5rem;
+}
+
+.footer{
+    background: rgb(15, 15, 15);
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: var(--retro-white);
+}
+
+.footer .credit span{
+    color: var(--pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+
+}
+
+@media (max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; right: 0; left: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+}
+
+@font-face {
+    font-family: 'font1';
+    src: url('/Fonts/Minal.otf');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('/Fonts/Type\ Machine.ttf');
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('/Fonts/Louis\ George\ Cafe.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
